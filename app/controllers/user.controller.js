@@ -10,7 +10,8 @@ exports.create = function(req, res) {
 	else {
 		var user = new User({
 			firstName: req.body.firstName,
-			lastName : req.body.lastName || "Smith"
+			lastName: req.body.lastName,
+			donations: req.body.donations
 		});
 
 		// Another way of saving, from https://www.jenniferbland.com/saving-data-to-mongodb-database-from-node-js-application-tutorial/
