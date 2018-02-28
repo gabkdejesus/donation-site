@@ -4,5 +4,6 @@ module.exports = function(app) {
 	// User Routes
 	// Get all users
 	app.get('/users', users.findAll);
-
+	// Create a user
+	app.post('/create', users.create);
 };
