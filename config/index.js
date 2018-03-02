@@ -33,7 +33,9 @@ app.get('/', function(req, res) {
 
 require('./routes.js')(app);
 
-// Start the server
-app.listen(3000, function() {
-	console.log('Listening to port 3000');
+// Config server
+var baseUrlConfig = require('./baseUrl.config.js');
+
+app.listen(baseUrlConfig.port, function() {
+	console.log('Listening to port ' + baseUrlConfig.port);
 });
